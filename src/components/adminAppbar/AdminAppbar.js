@@ -12,7 +12,6 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ThemeMenu from "../theme/ThemeMenu";
 import { useSelector } from "react-redux";
@@ -192,6 +191,13 @@ const AdminAppbar = () => {
           <ThemeMenu />
 
           <div>{loginAndLogoutButton}</div>
+          <Button
+      key='register'
+      onClick={() => navigate("/auth/register")}
+      sx={{ my: 2, color: "white", display: "block" }}
+    >
+      Register
+    </Button>
         </Toolbar>
       </Container>
     </AppBar>

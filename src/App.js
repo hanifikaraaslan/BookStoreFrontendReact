@@ -1,8 +1,7 @@
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import ListAuthor from "./adminpages/authors/ListAuthor";
 import ListBook from "./adminpages/books/ListBook";
 import ListCategory from "./adminpages/categories/ListCategory";
-import TopLink from "./components/links/TopLink";
 import AppContext from "./context/AppContext";
 import { useContext } from "react";
 import Home from "./pages/home/Home";
@@ -11,8 +10,6 @@ import AddAuthor from "./adminpages/authors/AddAuthor";
 
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import { Button, createTheme } from "@mui/material";
-import { blue, yellow } from "@mui/material/colors";
 import AddCategory from "./adminpages/categories/AddCategory";
 import SimpleSnackbar from "./components/snackBar/SimpleSnackbar";
 
@@ -21,10 +18,11 @@ import UpdateCategory from "./adminpages/categories/UpdateCategory";
 import AddBook from "./adminpages/books/AddBook";
 import Login from "./pages/login/Login";
 import BookList from "./pages/book/BookList";
+import Register from "./pages/register/Register";
 
 
 function App() {
-  const { authors, setAuthors, isLoading, setIsLoading } = useContext(AppContext);
+  const { isLoading, setIsLoading } = useContext(AppContext);
   const {snackbar} = useSelector(state => state.setting);
   return (
     <div>
@@ -58,6 +56,7 @@ function App() {
         <Route path='/admin/authors/add' element={<AddAuthor />} />
         
         <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/register" element={<Register />} />
 
         <Route path="/books" element={<BookList />} />
 
