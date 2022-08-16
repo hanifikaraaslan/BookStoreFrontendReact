@@ -1,9 +1,9 @@
-import { createTheme, ThemeProvider } from "@mui/material";
-import { blue, brown, green, red, yellow } from "@mui/material/colors";
+import { createTheme} from "@mui/material";
+import { blue, brown, green, teal, yellow } from "@mui/material/colors";
 
 const theme1 = createTheme({
   palette: {
-    primary: red,
+    primary: teal,
     secondary: yellow,
   },
 });

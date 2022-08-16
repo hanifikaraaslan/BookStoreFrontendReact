@@ -1,8 +1,6 @@
 import { Avatar, Button } from "@mui/material";
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import ThemeMenu from "../../components/theme/ThemeMenu";
-import { setTheme } from "../../store/actions/settingActions";
 
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,11 +8,10 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 
 import { deleteOneBook, getAllBooks } from "../../store/actions/bookActions";
 import AuthorList from "../../components/authorList/AuthorList";
-import {  ButtonGroup, Fab } from "@mui/material";
+import {  ButtonGroup} from "@mui/material";
 import SimpleFab from "../../components/fab/SimpleFab";
 
 export default function ListBook() {
@@ -32,12 +29,12 @@ export default function ListBook() {
 
   return (
     <>
-      {books.length}
+      {/* {books.length} */}
       <TableContainer>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Id</TableCell>
+              {/* <TableCell>Id</TableCell> */}
               <TableCell>Image</TableCell>
               <TableCell>Title</TableCell>
               <TableCell>Price</TableCell>
@@ -53,7 +50,7 @@ export default function ListBook() {
                 book;
               return (
                 <TableRow key={id}>
-                  <TableCell>{id}</TableCell>
+                  {/* <TableCell>{id}</TableCell> */}
                   <TableCell>
                     <Avatar src={`/books/${id % 121}.jpg`}></Avatar>
                   </TableCell>

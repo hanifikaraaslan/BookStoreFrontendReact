@@ -1,9 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
 import AppContext from "../../context/AppContext";
-import AddAuthor from "./AddAuthor";
-import AddIcon from "@mui/icons-material/Add";
 import { Avatar, Button, ButtonGroup, Fab, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -62,7 +59,7 @@ export default function ListAuthor() {
         <Table sx={{ minWidth: 650 }} aria-label='simple table'>
           <TableHead>
             <TableRow>
-              <TableCell align='left'>Id</TableCell>
+              {/* <TableCell align='left'>Id</TableCell> */}
               <TableCell align='left'>Image</TableCell>
               <TableCell align='left'>First name</TableCell>
               <TableCell align='left'>Last namee</TableCell>
@@ -76,9 +73,9 @@ export default function ListAuthor() {
                 key={author.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell component='th' scope='row'>
+                {/* <TableCell component='th' scope='row'>
                   {author.id}
-                </TableCell>
+                </TableCell> */}
                 <TableCell align='left'>
                   <Avatar src={`/authors/${author.id%20}.jpg`}></Avatar>
                 </TableCell>

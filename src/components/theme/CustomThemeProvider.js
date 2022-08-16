@@ -20,7 +20,7 @@ function CustomThemeProvider({children}) {
                 setCurrentTheme(theme3);
                 break;
             default:
-                setCurrentTheme(theme2)
+                setCurrentTheme(theme1)
                 break;
         }
     },[theme]);

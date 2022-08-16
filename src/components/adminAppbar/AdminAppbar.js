@@ -15,6 +15,9 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useNavigate } from "react-router-dom";
 import ThemeMenu from "../theme/ThemeMenu";
 import { useSelector } from "react-redux";
+import BookIcon from '@mui/icons-material/Book';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 const pages = ["Books", "Categories", "Authors"];
 const paths = [
@@ -69,7 +72,7 @@ const AdminAppbar = () => {
     <AppBar position='static'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <BookIcon/>
           <Typography
             variant='h6'
             noWrap
@@ -198,6 +201,9 @@ const AdminAppbar = () => {
     >
       Register
     </Button>
+    <IconButton color="secondary" aria-label="add to shopping cart">
+  <ShoppingCartIcon />
+</IconButton>
         </Toolbar>
       </Container>
     </AppBar>
