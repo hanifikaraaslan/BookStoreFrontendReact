@@ -7,7 +7,7 @@ const registerService = new RegisterService();
 export function register(body) {
   return function (dispatch) {
     registerService
-      .login(body)
+      .postOneRegister(body)
       .then((resp) => resp)
       .then((resp) => dispatch({ type: REGISTER, payload: resp }));
   };

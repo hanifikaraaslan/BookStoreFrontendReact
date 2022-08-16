@@ -72,7 +72,7 @@ export default function Login() {
           </Button>
         </Stack>
       </Container>
-      {JSON.stringify(values)}
+      {/* {JSON.stringify(values)} */}
     </form>
   );
 }

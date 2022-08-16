@@ -5,7 +5,7 @@ import RegisterService from "../../services/RegisterService";
 import { showSnackbar } from "../../store/actions/settingActions";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {logIn} from "../../store/actions/authActions";
+import { logIn } from "../../store/actions/authActions";
 export default function Login() {
   const registerService = new RegisterService();
   const navigate = useNavigate();
@@ -15,67 +15,68 @@ export default function Login() {
     initialValues: {
       userName: "",
       password: "",
-      firstName:"",
-      lastName:"",
-      roleId:3
+      firstName: "",
+      lastName: "",
+      roleId: 3,
     },
     onSubmit: async (values) => {
       console.log(values);
       registerDispatch(logIn(values));
       registerService.postOneRegister(values).then((resp) => {
         showSnackbar({
-            message: "User register success",
-            severity: "success",
-          })
+          message: "User register success",
+          severity: "success",
+        });
       });
+      navigate("/");
     },
   });
 
   return (
     <form onSubmit={handleSubmit}>
-      <Container sx={{ mt: 3 }} maxWidth='xs'>
+      <Container sx={{ mt: 3 }} maxWidth="xs">
         <Stack spacing={3}>
           <TextField
-            name='userName'
+            name="userName"
             required
-            label='User Name'
-            variant='outlined'
+            label="User Name"
+            variant="outlined"
             onChange={handleChange}
             value={values.userName}
           ></TextField>
           <TextField
-            name='password'
-            type='password'
+            name="password"
+            type="password"
             required
-            label='Password'
-            variant='outlined'
+            label="Password"
+            variant="outlined"
             onChange={handleChange}
             value={values.password}
           ></TextField>
-           <TextField
-            name='firstName'
-            type='firstName'
+          <TextField
+            name="firstName"
+            type="firstName"
             required
-            label='firstName'
-            variant='outlined'
+            label="firstName"
+            variant="outlined"
             onChange={handleChange}
             value={values.firstName}
           ></TextField>
           <TextField
-            name='lastName'
-            type='lastName'
+            name="lastName"
+            type="lastName"
             required
-            label='lastName'
-            variant='outlined'
+            label="lastName"
+            variant="outlined"
             onChange={handleChange}
             value={values.lastName}
-          ></TextField>          
-          <Button variant='contained' type='submit'>
+          ></TextField>
+          <Button variant="contained" type="submit">
             Submit
           </Button>
         </Stack>
       </Container>
-      {JSON.stringify(values)}
+      {/* {JSON.stringify(values)} */}
     </form>
   );
 }

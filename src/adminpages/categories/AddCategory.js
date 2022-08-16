@@ -31,7 +31,7 @@ export default function AddCategory() {
       message:"Category has been added.",
       duration:5000,
       open:true,
-      severity:"error"
+      severity:"success"
     }));
     navigate("/admin/categories/list");
   };

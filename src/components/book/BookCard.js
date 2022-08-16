@@ -41,7 +41,7 @@ export default function BookCard({book}) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={book.title}
+        // title={book.title}
         subheader={book.publisher}
         sx={{minHeight: 80}}
       />
