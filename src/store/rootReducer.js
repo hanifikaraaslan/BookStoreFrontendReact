@@ -5,6 +5,7 @@ import bookReducer from "./reducers/bookReducer";
 import authorReducer from "./reducers/authorReducer";
 import authReducer from "./reducers/authReducer";
 import registerReducer from "./reducers/registerReducer";
+import cartReducer from "./reducers/cartReducer";
 
 const rootReducer = combineReducers({
     setting: settingReducer,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
     book : bookReducer,
     author : authorReducer,
     auth : authReducer,
-    register:registerReducer
+    register:registerReducer,
+    cart :cartReducer
 });
 
 export default rootReducer;

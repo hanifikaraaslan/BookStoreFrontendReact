@@ -15,30 +15,15 @@ export default function AddAuthor() {
     setAuthors } = useContext(AppContext);
 
   const initial = {
-    firstName: "Aslan",
-    lastName: "Can",
-    email: "aslan.can@gmail.com",
+    firstName: "",
+    lastName: "",
+    email: "@gmail.com",
   };
 
   const [form, setForm] = useState(initial);
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // const url = "http://localhost:8080/api/v1/authors";
-
-    // const entity = {
-    //   firstName:"Ayşe",
-    //   lastName:"Ay",
-    //   email:"abc@gmail.com"
-    // }
-
-    // axios.post(url, entity)
-    // .then(resp => resp.data)
-    // .then(resp => {
-    //   console.log(resp.data);
-    //   setAuthors([...authors, resp.data]) // action -> (dispatch) -> reducer
-    // })
-
    setIsLoading(true);
    console.log(isLoading);
    
